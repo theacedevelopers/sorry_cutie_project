@@ -1,0 +1,56 @@
+<!--Coding By Aditya Dhiman-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Sorry Cutie</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1 class="header_text">I am so sorry cutie. Please forgive me</h1>
+      </div>
+      <p>
+        <a href="https://www.instagram.com/adityadhiman.in/"
+          >@adityadhiman.in</a
+        >
+      </p>
+      <div class="gif_container">
+        <img src="love5.gif" alt="Gif" />
+        <img src="love2.gif" alt="" />
+        <img src="love3.gif" alt="" />
+      </div>
+      <div class="buttons">
+        <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+        <button
+          class="btn"
+          id="noButton"
+          onmouseover="moveButton()"
+          onclick="moveButton()"
+        >
+          No
+        </button>
+
+        <script>
+          function nextPage() {
+            window.location.href = "yes.html";
+          }
+
+          function moveButton() {
+            var x =
+              Math.random() *
+              (window.innerWidth -
+                document.getElementById("noButton").offsetWidth);
+            var y =
+              Math.random() *
+              (window.innerHeight -
+                document.getElementById("noButton").offsetHeight);
+            document.getElementById("noButton").style.left = `${x}px`;
+            document.getElementById("noButton").style.top = `${y}px`;
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
